@@ -2,9 +2,10 @@ from django.db import models
 
 
 # Create your models here.
-class Post(models.Model):
-    todo_title = models.CharField(max_length=30)
-    note = models.TextField()
+class Task(models.Model):
+    name = models.CharField(max_length=100)
+    memo = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
-    create_at = models.DateField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.name
