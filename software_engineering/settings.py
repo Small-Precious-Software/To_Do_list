@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'todo',
-    'single_pages',
+    'todo',                         #할일 목록 페이지
+    'single_pages',                 #첫 화면
+    'alarms',                       #알람
+    'friends',                      #친구
+    'users',                        #로그인 화면
 
 ]
 
