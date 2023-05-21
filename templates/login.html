@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOLIST</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+<body>
+    <div class="logo">To do List</div>
+    <div id="logIn">
+        <span>Log In</span>
+        <form>
+            <input id="userId" type="text" required>
+            <input id="pwd" type="password" required>
+            <input type="submit" class="logIn" value="LOG IN">
+            <button id="ForgotPw" type="button">Forgot Password</button>
+            <button id="join" type="button">회원가입</button>
+        </form>
+    </div>
+
+    <div id="modal-container" class="modal unstaged">
+        <div class="modal-overlay"></div>
+        <div id="modal-container" class="modalWin">
+            <h3 class="logFaild">등록된 아이디가 없습니다.</h3>
+            <button class="okBtn">확인</button>
+        </div>
+    </div>
+</body>
+<script src="../static/js/handleLogin.js"></script>
+</html>

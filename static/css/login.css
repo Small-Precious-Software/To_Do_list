@@ -1,0 +1,231 @@
+/************/
+/*  fonts   */
+/************/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #6FB0EC;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logIn {
+    position: absolute;
+    top: 229px;
+
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+    width: 900px;
+    height: 600px;
+    background-color: #FFFFFF;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logIn > span {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+
+    color: #5EA1DE;
+
+    position: absolute;
+    top: 63px;
+    left: 150px;
+}
+
+input {
+    width: 600px;
+    height: 70px;
+    margin-top: 22px;
+    margin-left: 143px;
+    background: #5EA1DE;
+    border: 2px solid #5EA1DE;
+    border-radius: 6px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: #FFFFFF;
+}
+
+input[required] {
+    background: #FFFFFF;
+    border: 2px solid #5EA1DE;
+    margin: 18px 143px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: left;
+
+    color: #5EA1DE;
+}
+
+form:nth-of-type(1){
+    position: absolute;
+    top: 139px;
+}
+
+#pwd {
+    top: 245px;
+}
+
+.logo {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    top: 33px;
+    left: 62px;
+
+    position: absolute;
+    width: 190px;
+    height: 46px;
+    
+    color: #FFFFFF;
+}
+
+button {
+
+    width: 280px;
+    height: 50px;
+    top: 461px;
+    margin: 36px 17.5px;
+
+    background: #FFFFFF;
+    border: 2px solid #5EA1DE;
+    border-radius: 6px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+
+    color: #5EA1DE;
+}
+
+#ForgotPw {
+    margin-left: 143px;
+}
+
+.backgroundComp {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.okBtn {
+    background: #5EA1DE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+    width: 139px;
+    height: 40px;
+    margin-top: 22.5px;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+}
+
+.okBtn:active {
+    box-shadow: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    max-width: 100%;
+    max-height: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .opaque {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+
+.unstaged {
+    top: -1000px;
+    height: 0;
+  }
+
+
+.logFaild {
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: #5EA1DE;
+}
+
+.modalWin {
+    position: relative;
+    width: 646px;
+    height: 152px;
+    top: 60px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    padding-top: 40.5px;
+    color: #5EA1DE;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.modal-overlay {
+    position: absolute;
+     /* display: none; */
+     width: 100%;
+     height: 100%;
+     background-color: RGBA(0, 0, 0, 0.6);
+  
+  }
