@@ -1,35 +1,45 @@
 import calendar
 from datetime import datetime
 from django.shortcuts import render, redirect
-from .models import Task
+from django.views.generic import ListView, DetailView
+
+from .models import Task, Category
 
 
-def index(request):
-    if request.method == 'POST':
-        name = request.POST['name']
-        memo = request.POST['memo']
-        task = Task(name=name, memo=memo)
-        task.save()
-        return redirect('index')
+class TodoList(ListView):
+    model = Task
+    ordering = '-pk'
 
-    tasks = Task.objects.all().order_by('-created_at')
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(TodoList, self).get_context_data()
+        context['categories'] = Category.objects.all()
+        context['no_category_count'] = Task.objects.filter(category=None).count()
 
-    # 달력 생성
-    now = datetime.now()
-    year = now.year
-    month = now.month
-    cal = calendar.monthcalendar(year, month)
+        return context
 
-    links = {}
-    for week in cal:
-        for i, day in enumerate(week):
-            if day != 0:
-                date = datetime(year, month, day).strftime('%Y-%m-%d')
-                links[date] = f'/tasks/{date}'
+
+class TodoDetail(DetailView):
+    model = Task
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(TodoDetail, self).get_context_data()
+        context['categories'] = Category.objects.all()
+        context['no_category_count'] = Task.objects.filter(category=None).count()
+        return context
+
+
+def categories_page(request, slug):
+    if slug == 'no-category':
+        category = '미분류'
+        task_list = Task.objects.filter(category=None)
+    else:
+        category = Category.objects.get(slug=slug)
+        task_list = Task.objects.filter(category=category)
 
     context = {
-        'tasks': tasks,
-        'calendar': cal,
-        'links': links,
+        'category': category,
+        'categories': Category.objects.all(),
+        'task_list': task_list,
+        'no_category_count': Task.objects.filter(category=None).count()
     }
-    return render(request, 'index.html', context)
+    return render(request, 'task_list.html', context)

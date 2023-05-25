@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'task/bootstrap/bootstrap.min.css' %}" media="screen">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{% static 'task/css/task-post.css' %}" media="screen">
+<h1>Todo
+    {% if category %}
+        postings with category {{ category }}
+    {% endif %}
+
+
+</h1>
+        {% for t in task_list %}
+        <!-- Blog Post -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">{{ t.name}}({{ t.category }})</h2>
+                <p class="card-text">{{ t.memo | truncatewords:45 }}</p>
+                <a href="{{ t.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+                Posted on {{ t.created_at}} by
+            </div>
+        </div>
+        {% endfor %}
+        <!-- Pagination -->
+        <ul class="pagination justify-content-center mb-4">
+            <li class="page-item">
+                <a class="page-link" href="#">&larr; Older</a>
+            </li>
+            <li class="page-item disabled">
+                <a class="page-link" href="#">Newer &rarr;</a>
+            </li>
+        </ul>
+</head>
+<body>
+
+</body>
+</html>
