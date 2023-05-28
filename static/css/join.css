@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.body{
+    font-family: 'Comfortaa', cursive;
+
+
+}
+.logo{
+    margin-top :20px;
+    margin-left : 70px;
+    font-family: 'Comfortaa';
+    color: #5EA1DE;
+    font-size:36px;
+}
+
+.wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.main{
+    margin-top:30px;
+    color: #5EA1DE;
+    font-family: 'Comfortaa';
+}
+
+input::placeholder {color:#5EA1DE;}
+input::-webkit-input-placeholder {color:#5EA1DE;}
+input:-ms-input-placeholder {color:#5EA1DE;}
+
+input{
+    border: 2px solid #5EA1DE;
+    width: 650px;
+    height: 40px;
+}
+
+button {
+    color : #ffff;
+    background-color: #5EA1DE;
+    border : none;
+    border-radius :4px;
+    box-shadow: 2px 2px 2px rgb(148, 148, 148);
+
+    transition-duration: 0.3s;
+}
+
+button:active {
+    
+    box-shadow: none;
+
+}
+
+p{
+    
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.회원가입 {
+    margin-bottom: 15px;
+    font-size:36px;
+}
+
+.userId {
+    width: 450px;
+    height: 40px;
+}
+.check {
+    height: 40px;
+    width: 150px;
+    margin-left: 48px;
+}
+
+.field-name-birth{
+    display: flex;
+}
+
+.name {
+    width: 300px;
+    height: 40px;
+    
+}
+
+.birth {
+    width: 300px;
+    height: 40px;
+    margin-left: 47px;
+}
+
+.account {
+    width: 650px;
+    height: 40px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+
+.modal {
+  opacity: 0;
+
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: opacity 0.5s;
+}
+.modal.opaque {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.modal.unstaged {
+  top: -100px;
+  height: 0;
+}
+
+.modal-overlay {
+  position: absolute;
+   /* display: none; */
+   width: 100%;
+   height: 100%;
+   background-color: RGBA(0, 0, 0, 0.6);
+
+}
+/* 모달창 크기 */
+#modal-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 646px;
+    height: 152px;
+  
+    text-align: center;
+    background-color: #fff;
+    border-radius: 1rem;
+  }
+
+  .modal-text{
+    font-size :23px;
+    margin-top:33px;
+  }
+
+  .okbtn{
+    width: 139px;
+    height: 40px;
+    font-size: 23px;
+    margin-top:30px;
+    border-radius: 15px;
+  }
