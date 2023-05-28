@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+*:not(.top-menu){
+    color :#5EA1DE;
+}
+body{
+    background-color: #B3D6F5;
+    font-family: 'Roboto'
+}
+
+.top-menu{
+    height: 60px;
+    background-color: #B3D6F5;
+    color:#004F98;
+    position: fixed;
+    border-bottom: 1px solid #5EA1DE;
+    width :100%;
+    top:0px;
+}
+
+#alert-icon{
+    position:fixed;
+    top:15px;
+    left : 10px;
+
+}
+
+#my-icon{
+    position: fixed;
+    top:15px;
+    right: 10px;
+}
+
+#center-logo{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 15px;
+}
+
+.main {
+    margin-top: 80px;
+    
+}
+/*왼쪽 박스*/
+
+.left-box{
+    background-color: white;
+    width: 270px;
+    height: 924px;
+    float: left;
+    margin-left: 20px;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.completedlist{
+    margin-top: 10px;
+    height: 300px;
+    width: auto;
+}
+
+.category-box{
+    height: 20px;
+    width: 270px;
+}
+#category{
+    float:left;
+    font-size: 20px;
+    font-weight: 600px;
+    margin-bottom:10px;
+}
+#add-category{
+    float:right;
+    font-size: 20px;
+    margin-right:10px ;
+}
+
+.categorylist li{
+  width: 270px;
+  list-style: none;
+
+  position: relative;
+  margin-bottom: 9px;
+  text-indent: 15px; 
+  font-weight: 400;
+  cursor: pointer;
+}
+/*중앙 박스*/
+.main-box{
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 10px;
+    width: 590px;
+    height: 924px;
+    float :left;
+    margin-left: 15px;
+    border-radius:15px;
+}
+/*오른쪽 박스*/
+.right-box{
+    
+    width: 520px;
+    height: 924px;
+    background-color: white;
+    border-radius: 15px;
+    float:right;
+    margin-right : 15px;
+   /*display: none;*/
+}
+.right-box-top{
+  height: 50px;
+  width: auto;
+}
+#rbt-back{
+  margin-left: 10px;
+  color:#5EA1DE;
+  float: left;
+  font-size: 30px;
+  font-weight: 500;
+}
+#rb-star{
+  margin-top:10px;
+  margin-right:15px;
+  float:right;
+}
+
+.right-box-main{
+  text-align: center;
+}
+
+#rb-task-name{
+  margin-top:30px;
+  margin-bottom:70px;
+  font-size:30px;
+  color: #004F98;
+  border: none;
+
+}
+
+.rb-menu{
+  padding-top:20px;
+  width: 100%;
+  height: 40px;
+  border-top:1px solid #5EA1DE;
+  color:#5EA1DE; 
+}
+
+#rb-alarm{
+  border-bottom:1px solid #5EA1DE;
+}
+.memo-box{
+  width: 466px;
+  height: 400px;
+  background-color: #FAFAFA;
+  border :none;
+  margin-top:20px;
+  margin-left:27px;
+  
+}
+textarea::placeholder {color:#5EA1DE;}
+textarea:focus{outline: none;}
+.rb-wrapper{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.rb-p{
+  margin-right: 10px;
+  font-weight: 600;
+}
+input{
+  border: 1px solid #5EA1DE;
+  
+
+}  
+input:focus {outline:none;}
+
+
+select{
+  border: 1px solid #5EA1DE;
+}
+   /* 캘린더 위의 해더 스타일(날짜가 있는 부분) */
+   #calendar{
+    background-color: white;
+    border-radius: 15px;
+    float:right;
+    margin-right: 40px;
+    width: 580px;
+    display: none;
+  }
+  #calendar_weekdays div{
+    display:inline-block;
+    vertical-align:top;
+  }
+  #calendar_content, #calendar_weekdays, #calendar_header{
+    position: relative;
+    width: 320px;
+    overflow: hidden;
+    float: left;
+    z-index: 10;
+  }
+  #calendar_weekdays div, #calendar_content div{
+    width:40px;
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #787878;
+  }
+  #calendar_content{
+    -webkit-border-radius: 0px 0px 12px 12px;
+    -moz-border-radius: 0px 0px 12px 12px; 
+    border-radius: 0px 0px 12px 12px;
+  }
+  #calendar_content div{
+    float: left;
+  }
+  #calendar_content div:hover{
+    background-color: #F8F8F8;
+  }
+  #calendar_content div.blank{
+    background-color: #E8E8E8;
+  }
+  #calendar_header, #calendar_content div.today{
+    zoom: 1;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+  }
+  #calendar_content div.today{
+    color: #FFFFFF;
+  }
+  #calendar_header{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    background-color: #004F98;
+    padding: 18px 0;
+    -webkit-border-radius: 12px 12px 0px 0px;
+    -moz-border-radius: 12px 12px 0px 0px; 
+    border-radius: 12px 12px 0px 0px;
+  }
+  #calendar_header h1{
+    font-size: 1.5em;
+    color: #FFFFFF;
+    float:left;
+    width:70%;
+  }
+
+  i[class^=icon-chevron]{
+    color: #FFFFFF;
+    float: left;
+    width:15%;
+    border-radius: 50%;
+  }
+    /*display: none;*/
+  
+  
