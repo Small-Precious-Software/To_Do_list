@@ -42,4 +42,4 @@ def categories_page(request, slug):
         'task_list': task_list,
         'no_category_count': Task.objects.filter(category=None).count()
     }
-    return render(request, 'task_list.html', context)
+    return render(request, 'todo/task_list.html', context)
